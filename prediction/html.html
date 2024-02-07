@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="ubah.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="h-full flex align-middle justify-center bg-slate-100">
+    <div class="relative max-w-80 w-full rounded-xs pt-10 pb-20 px-20">
+      <input
+        type="text"
+        class="h-20 w-max outline-none border-none text-right mb-3 text-2xl text-black"
+        id="display"
+      />
+      <div class="grid grid-cols-4 rounded-lg bg-slate-200 w-max">
+        <button
+          class="p-3 rounded-md border-none text-2xl cursor-pointer text-red-600 bg-white"
+          data-val="AC"
+        >
+          AC
+        </button>
+        <button
+          class="p-3 rounded-md border-none text-2xl cursor-pointer text-red-600 bg-white active:scale-75"
+          data-val="DEL"
+        >
+          DEL
+        </button>
+        <button
+          class="p-3 rounded-md border-none text-2xl cursor-pointer text-red-600 bg-white active:scale-75"
+          data-val="%"
+        >
+          %
+        </button>
+        <button
+          class="p-3 rounded-md border-none text-2xl text-red-600 cursor-pointer bg-white active:scale-75"
+          data-val="/"
+        >
+          /
+        </button>
+
+        <button
+          class="p-3 rounded-md border-none text-2xl cursor-pointer bg-white active:scale-75"
+          data-val="7"
+        >
+          7
+        </button>
+        <button
+          class="p-3 rounded-md border-none text-2xl cursor-pointer bg-white active:scale-75"
+          data-val="8"
+        >
+          8
+        </button>
+        <button
+          class="p-3 rounded-md border-none text-2xl cursor-pointer bg-white active:scale-75"
+          data-val="9"
+        >
+          9
+        </button>
+        <button
+          class="p-3 rounded-md border-none text-2xl text-red-600 cursor-pointer bg-white active:scale-75"
+          data-val="*"
+        >
+          *
+        </button>
+
+        <button
+          class="p-3 rounded-md border-none text-2xl cursor-pointer bg-white active:scale-75"
+          data-val="4"
+        >
+          4
+        </button>
+        <button
+          class="p-3 rounded-md border-none text-2xl cursor-pointer bg-white active:scale-75"
+          data-val="5"
+        >
+          5
+        </button>
+        <button
+          class="p-3 rounded-md border-none text-2xl cursor-pointer bg-white active:scale-75"
+          data-val="6"
+        >
+          6
+        </button>
+        <button
+          class="p-3 rounded-md border-none text-2xl text-red-600 cursor-pointer bg-white active:scale-75"
+          data-val="-"
+        >
+          -
+        </button>
+
+        <button
+          class="p-3 rounded-md border-none text-2xl cursor-pointer bg-white active:scale-75"
+          data-val="1"
+        >
+          1
+        </button>
+        <button
+          class="p-3 rounded-md border-none text-2xl cursor-pointer bg-white active:scale-75"
+          data-val="2"
+        >
+          2
+        </button>
+        <button
+          class="p-3 rounded-md border-none text-2xl cursor-pointer bg-white active:scale-75"
+          data-val="3"
+        >
+          3
+        </button>
+        <button
+          class="p-3 rounded-md border-none text-2xl text-red-600 cursor-pointer bg-white active:scale-75"
+          data-val="+"
+        >
+          +
+        </button>
+
+        <button
+          class="p-3 rounded-md border-none text-2xl cursor-pointer bg-white active:scale-75"
+          data-val="0"
+        >
+          0
+        </button>
+        <button
+          class="p-3 rounded-md border-none text-2xl cursor-pointer bg-white active:scale-75"
+          data-val="00"
+        >
+          00
+        </button>
+        <button
+          class="p-3 rounded-md border-none text-2xl cursor-pointer bg-white active:scale-75"
+          data-val="."
+        >
+          .
+        </button>
+        <button
+          class="p-3 rounded-md border-none text-2xl cursor-pointer bg-white text-red-600 active:scale-75"
+          data-val="="
+        >
+          =
+        </button>
+      </div>
+    </div>
+    <script>
+      const display = document.querySelector(".display");
+      const buttons = document.querySelectorAll("button");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", (e) =>
+          console.log(e.target.dataset.value)
+        );
+      });
+    </script>
+  </body>
+</html>
